@@ -58,7 +58,7 @@ def section(title: str, question: str | None = None) -> None:
 def footer() -> None:
     st.html(
         '<div class="footer">Analysis by <b>Ahmad Hassan</b>, AI Engineer · '
-        f'<a href="{NOTEBOOK_URL}" target="_blank">Original notebook on GitHub</a> · '
+        f'<a href="{NOTEBOOK_URL}" target="_blank">Notebook on GitHub</a> · '
         f'<a href="{LEARN_URL}" target="_blank">Learn with Ahmad</a><br>'
         "Independent analysis of a sample of the public Instacart Market Basket dataset (2017). "
         "Not affiliated with or endorsed by Instacart.</div>"

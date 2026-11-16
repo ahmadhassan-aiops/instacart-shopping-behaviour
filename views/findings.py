@@ -110,7 +110,7 @@ def render() -> None:
         st.markdown(
             "**How this was done.** Five tables (orders, order items, products, aisles, departments) were "
             "checked, cleaned and joined in pandas, then analysed against twelve business questions. "
-            "The cleaning decisions, the raw data and the original notebook are on the methods page."
+            "The cleaning decisions, the raw data and the notebook are on the methods page."
         )
         st.page_link(METHOD, label="Data & method", icon=":material/arrow_forward:")
 

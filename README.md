@@ -12,6 +12,8 @@ short_description: How 157,000 Instacart customers shop for groceries (EDA)
 
 # How 157,000 Instacart customers shop for groceries
 
+**Live app:** [instacart-shopping-behaviour.streamlit.app](https://instacart-shopping-behaviour.streamlit.app/) · **Notebook and project folder:** [AIOPS-Portfolio-Projects](https://github.com/ahmadhassan-aiops/AIOPS-Portfolio-Projects/tree/main/1.%20Data-analysis-with-python-Projects/Instacart-Analysis)
+
 An interactive presentation of an exploratory data analysis by **Ahmad Hassan** (AI Engineer).
 It opens straight onto the findings; there is nothing to upload.
 

@@ -16,7 +16,7 @@ def render() -> None:
         "Data & method",
         "How the analysis was done",
         "The data, the cleaning decisions and why each was made, and the questions the analysis answers. "
-        f'The full Python work is in the <a href="{data.NOTEBOOK_URL}" target="_blank">notebook</a> (updated with the corrections described here).',
+        f'The full Python work is in the <a href="{data.NOTEBOOK_URL}" target="_blank">notebook</a>.',
     )
 
     section("The data")
@@ -42,8 +42,8 @@ def render() -> None:
 
     section("Cleaning decisions")
     st.markdown(
-        "Every issue found while checking the tables, and how it was handled. Three of them were revisited "
-        "for this app after a closer look at *why* the values were missing."
+        "Every issue found while checking the tables, and how it was handled, based on *why* the values "
+        "are missing."
     )
     st.table(
         pd.DataFrame([
@@ -51,16 +51,14 @@ def render() -> None:
              "day and hour (likely a logging error)", "Removed"),
             ("Missing days since previous order", f"{cl['first_orders']:,} rows, and every one is the customer's "
              "first order: there is no previous order to measure from", "Kept as first orders and left out of the "
-             "gap statistics. The first version filled them with the mean; that would invent an 11-day gap for new customers"),
+             "gap statistics. Filling them with the mean would invent an 11-day gap for new customers"),
             ("Missing cart position", f"{cl['missing_cart_position_rows']} items in {cl['missing_cart_position_orders']} "
              f"orders, all orders of {cl['missing_cart_position_min_order_size']}+ items: the system stops numbering "
-             "after position 64", f"Kept, because they are real purchases. Dropping them (as the first version did) "
-             f"capped the largest order at 64 items; it is really {m['items_max']}"),
+             "after position 64", f"Kept, because they are real purchases: the largest order has {m['items_max']} items"),
             ("Missing product names", f"{cl['unnamed_products']:,} products in the catalogue",
              "Labelled \"Unnamed product\" so their sales still count in department totals"),
             ("Float columns", "add_to_cart_order and days_since_prior_order were stored as decimals", "Converted to whole numbers"),
-            ("Day of week coding", "order_dow runs 0 to 6", "Read as 0 = Sunday. The first version's Wednesday vs Saturday "
-             "comparison used days 4 and 0; this app uses 3 and 6"),
+            ("Day of week coding", "order_dow runs 0 to 6", "Read as 0 = Sunday, so Wednesday is 3 and Saturday is 6"),
         ], columns=["Issue", "What was found", "How it was handled"]),
         hide_index=True, border="horizontal",
     )

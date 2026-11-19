@@ -24,7 +24,7 @@ It opens straight onto the findings; there is nothing to upload.
 - **Reorders**: most reordered products, reorder rate by department, popularity vs reorder rate, product search.
 - **Data & method**: the raw tables, every cleaning decision and why, the twelve questions, and the limits of the data.
 
-Notebook (updated with the corrections described in the app): [AIOPS-Portfolio-Projects / Instacart-Analysis](https://github.com/ahmadhassan-aiops/AIOPS-Portfolio-Projects/tree/main/1.%20Data-analysis-with-python-Projects/Instacart-Analysis)
+Notebook: [AIOPS-Portfolio-Projects / Instacart-Analysis](https://github.com/ahmadhassan-aiops/AIOPS-Portfolio-Projects/tree/main/1.%20Data-analysis-with-python-Projects/Instacart-Analysis)
 
 ## How it is built
 
